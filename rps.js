@@ -16,31 +16,21 @@ function getComputerChoice(shake) {
 function startGame (myThrow, computerThrow) {
     if(myThrow == computerThrow) {
         console.log("tie")
-    }
-    if(myThrow == 'rock' && computerThrow == 'sicssors') {
-
-    console.log("player wins")}
-    if(myThrow == 'paper' && computerThrow == 'rock') {
-
+    } else if(
+    (myThrow == 'rock' && computerThrow == 'scissors') ||
+    (myThrow == 'paper' && computerThrow == 'rock') ||
+    (myThrow == 'scissors' && computerThrow == 'paper')
+    ) {
         console.log("player wins")}
-    if(myThrow == 'sicssors' && computerThrow == 'paper') {
-
-    console.log("player wins")}
-    if(myThrow == 'rock' && computerThrow == 'paper') {
-
-        console.log("computer wins")}
-        if(myThrow == 'paper' && computerThrow == 'sicssors') {
-    
-            console.log("computer wins")}
-        if(myThrow == 'sicssors' && computerThrow == 'rock') {
-    
-        console.log("computer wins")}
+    else {
+        console.log("Computer Wins")
+    }
 
 }
 let shake = getRandomInt(3)
 let computerThrow = getComputerChoice(shake)
 console.log("am i working")
-const myThrow = prompt("please enter Rock, Paper, Sicssor").toLowerCase()
+const myThrow = prompt("please enter Rock, Paper, Scissors").toLowerCase()
 startGame(myThrow, computerThrow)
 
 
